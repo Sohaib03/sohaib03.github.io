@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sohaib/research/qtweaver/</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <link rel="stylesheet" href="https://sohaib03.github.io/hugo-theme-console/css/terminal-0.7.4.min.css">
+    <link rel="stylesheet" href="https://sohaib03.github.io/hugo-theme-console/css/animate-4.1.1.min.css">
+    <link rel="stylesheet" href="https://sohaib03.github.io/hugo-theme-console/css/console.css">
+    
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+       <meta property="og:title" content="QT-WEAVER" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sohaib03.github.io/research/qtweaver/" /><meta property="article:published_time" content="2024-11-11T00:00:00+00:00" />
+
+
+
+<meta name="twitter:title" content="QT-WEAVER"/>
+<meta name="twitter:description" content="Overview
+Summarizing individual gene trees into species phylogenies using coalescent-based methods has become a standard approach in phylogenomics. However, gene tree estimation error (GTEE)—arising from both analytical factors and biological causes (e.g., short gene sequences)—can adversely impact the accuracy of phylogenomic inference.QT-WEAVER introduces the novel problem of correcting the quartet distribution induced by a set of estimated gene trees."/>
+
+</head>
+<body class="terminal">
+    <div class="container">
+        <div class="terminal-nav">
+          <header class="terminal-logo">
+            <div class="logo terminal-prompt">
+              
+              
+              <a href="https://sohaib03.github.io/" class="no-style site-name">Sohaib</a>:~# 
+              <a href='https://sohaib03.github.io/research'>research</a>/<a href='https://sohaib03.github.io/research/qtweaver'>qtweaver</a>/</div></header>
+          <nav class="terminal-menu">
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                <li><a href="https://sohaib03.github.io/about/" typeof="ListItem">about/</a></li>
+                
+                <li><a href="https://sohaib03.github.io/research/" typeof="ListItem">research/</a></li>
+                
+                <li><a href="https://sohaib03.github.io/photos/" typeof="ListItem">photos/</a></li>
+                
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <div class="container animated zoomIn fast" >
+        
+<h1>QT-WEAVER</h1>
+
+Nov. 11, 2024
+
+
+<br/><br/>
+<h2 id="overview">Overview</h2>
+<p>Summarizing individual gene trees into species phylogenies using coalescent-based methods has become a standard approach in phylogenomics. However, <strong>gene tree estimation error (GTEE)</strong>—arising from both analytical factors and biological causes (e.g., short gene sequences)—can adversely impact the accuracy of phylogenomic inference.QT-WEAVER introduces the novel problem of correcting the quartet distribution induced by a set of estimated gene trees.</p>
+<p>This involves updating the weights of the quartets to better reflect their relative importance within the gene tree distribution. QT-WEAVER learns conflicts within the quartet distribution induced by a set of gene trees and adjusts the weights to generate an updated quartet distribution.</p>
+<h3 id="advancements">Advancements</h3>
+<ul>
+<li><strong>General-Purpose Technique:</strong> QT-WEAVER does not require explicit modeling of the subject system or the sources of GTEE or gene tree heterogeneity.</li>
+<li><strong>Improved Species Tree Accuracy:</strong> Experimental results on simulated and empirical datasets demonstrate QT-WEAVER’s ability to effectively account for GTEE, leading to significant improvements in species tree accuracy.</li>
+<li><strong>Algorithmic Innovations:</strong> Introduces the concept of quartet conflicts, benefiting a wide range of quartet-based computations.</li>
+<li><strong>Open-Source Availability:</strong> Freely available for researchers and practitioners.</li>
+</ul>
+<h2 id="access-and-installation">Access and Installation</h2>
+<p>QT-WEAVER is available as an open-source project on GitHub. Clone the repository to access the code and documentation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/navidh86/QT-WEAVER.git
+</span></span></code></pre></div>
+
+
+        <div class="footer">
+    Powered by <a href="https://gohugo.io/">Hugo</a> with
+    <a href="https://github.com/mrmierzejewski/hugo-theme-console/">Console Theme</a>. 
+</div>
+
+    </div>
+  </body>
+</html>

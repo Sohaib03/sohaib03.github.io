@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sohaib</title>
+    <link>https://sohaib03.github.io/</link>
+    <description>Recent content on Sohaib</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Dec 2024 01:40:56 +0600</lastBuildDate>
+    <atom:link href="https://sohaib03.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>https://sohaib03.github.io/about/</link>
+      <pubDate>Sun, 01 Dec 2024 01:40:56 +0600</pubDate>
+      <guid>https://sohaib03.github.io/about/</guid>
+      <description>&lt;p&gt;Welcome to my personal space! I&amp;rsquo;m a passionate educator, researcher, and developer with a deep love for problem-solving and teaching. My journey has been shaped by diverse experiences, from competitive programming to cutting-edge research, all driven by a desire to learn and share knowledge.&lt;/p&gt;&#xA;&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;I graduated with a BSc in Computer Science and Engineering from Bangladesh University of Engineering and Technology (BUET). Currently, I serve as an adjunct lecturer at BUET, teaching courses such as Software Engineering and Mathematical Analysis for Computer Science. My passion for teaching extends beyond the classroom, as I actively mentor aspiring programmers and help organize contests to inspire students.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QT-WEAVER</title>
+      <link>https://sohaib03.github.io/research/qtweaver/</link>
+      <pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/research/qtweaver/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Summarizing individual gene trees into species phylogenies using coalescent-based methods has become a standard approach in phylogenomics. However, &lt;strong&gt;gene tree estimation error (GTEE)&lt;/strong&gt;—arising from both analytical factors and biological causes (e.g., short gene sequences)—can adversely impact the accuracy of phylogenomic inference.QT-WEAVER introduces the novel problem of correcting the quartet distribution induced by a set of estimated gene trees.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WQFM-tree</title>
+      <link>https://sohaib03.github.io/research/wqfmtree/</link>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/research/wqfmtree/</guid>
+      <description>&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;wQFM-TREE&lt;/strong&gt; is a summary method developed for species tree estimation from multi-locus data, addressing gene tree discordance. It builds on the wQFM method and improves its scalability, making it applicable to large datasets.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
