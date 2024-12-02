@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Sohaib</title>
+    <link>https://sohaib03.github.io/projects/</link>
+    <description>Recent content in Projects on Sohaib</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sohaib03.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CHIP-8 Emulator</title>
+      <link>https://sohaib03.github.io/projects/chip-8/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/projects/chip-8/</guid>
+      <description>&lt;p&gt;This project is a &lt;strong&gt;CHIP-8 emulator&lt;/strong&gt; written in &lt;strong&gt;Golang&lt;/strong&gt;. The &lt;strong&gt;Ebiten game engine&lt;/strong&gt; was used to create the graphical interface. Developing this project helped me understand how emulators work by simulating the behavior of a physical machine in software.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Yet Another C Compiler</title>
+      <link>https://sohaib03.github.io/projects/yet-another-c-compiler/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/projects/yet-another-c-compiler/</guid>
+      <description>&lt;p&gt;This repository contains my implementation of a &lt;strong&gt;C Compiler&lt;/strong&gt;, developed as part of a lab project during my undergraduate studies at &lt;strong&gt;BUET&lt;/strong&gt;. The project encompasses the complete pipeline of compiler construction, progressing through various stages to produce a functional compiler.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xv6 Operating System Enhancements</title>
+      <link>https://sohaib03.github.io/projects/xv6-operating-systems/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/projects/xv6-operating-systems/</guid>
+      <description>&lt;p&gt;This project extends the &lt;strong&gt;xv6 Operating System&lt;/strong&gt;, a simple Unix-like OS developed for educational purposes. The enhancements include the implementation of advanced scheduling algorithms, paging, and file system features. The project was initially developed as part of an operating systems lab, showcasing practical skills in OS development.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

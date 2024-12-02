@@ -29,5 +29,26 @@
       <guid>https://sohaib03.github.io/research/wqfmtree/</guid>
       <description>&lt;h3 id=&#34;overview&#34;&gt;Overview&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;wQFM-TREE&lt;/strong&gt; is a summary method developed for species tree estimation from multi-locus data, addressing gene tree discordance. It builds on the wQFM method and improves its scalability, making it applicable to large datasets.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>CHIP-8 Emulator</title>
+      <link>https://sohaib03.github.io/projects/chip-8/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/projects/chip-8/</guid>
+      <description>&lt;p&gt;This project is a &lt;strong&gt;CHIP-8 emulator&lt;/strong&gt; written in &lt;strong&gt;Golang&lt;/strong&gt;. The &lt;strong&gt;Ebiten game engine&lt;/strong&gt; was used to create the graphical interface. Developing this project helped me understand how emulators work by simulating the behavior of a physical machine in software.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Yet Another C Compiler</title>
+      <link>https://sohaib03.github.io/projects/yet-another-c-compiler/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/projects/yet-another-c-compiler/</guid>
+      <description>&lt;p&gt;This repository contains my implementation of a &lt;strong&gt;C Compiler&lt;/strong&gt;, developed as part of a lab project during my undergraduate studies at &lt;strong&gt;BUET&lt;/strong&gt;. The project encompasses the complete pipeline of compiler construction, progressing through various stages to produce a functional compiler.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xv6 Operating System Enhancements</title>
+      <link>https://sohaib03.github.io/projects/xv6-operating-systems/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/projects/xv6-operating-systems/</guid>
+      <description>&lt;p&gt;This project extends the &lt;strong&gt;xv6 Operating System&lt;/strong&gt;, a simple Unix-like OS developed for educational purposes. The enhancements include the implementation of advanced scheduling algorithms, paging, and file system features. The project was initially developed as part of an operating systems lab, showcasing practical skills in OS development.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
