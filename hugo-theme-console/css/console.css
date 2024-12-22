@@ -32,13 +32,18 @@
 
 :root {
     --global-font-size: 16px;
-    --global-font-color: #444;
+    --global-font-color: #ffffff;
     --mono-font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     --font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     --global-line-height: 1.6em;
-    --page-width: 70em;
+    --page-width: 60em;
     --display-h1-decoration: 1;
     --code-bg-color: #fff;
+    --font-color: #fff;
+    /* --primary-color: # */
+    --invert-font-color: #000;
+    --secondary-color: #9EC8B9;
+    --code-font-color: #1a1a1a;
 }
 
 @media only screen and (max-width: 850px) {
@@ -49,7 +54,6 @@
         --page-width: 70em;
     }
 }
-
 
 .sidebar-heading {
     text-transform: none;
@@ -73,7 +77,8 @@
 body {
     font-family: var(--font-stack);
     font-size: var(--global-font-size);
-    background-color: #fff;
+    background-color: #0F0F0F;
+    color: #fff;
     margin-bottom: 75px;
 }
 
@@ -100,6 +105,21 @@ h1 {
 .content-column-content p,
 .content-column-content li {
     color: #666;
+}
+
+.btn-default:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: #000000;
+}
+
+.btn-small {
+    padding: 0.3em 0.8em;
+    font-size: 0.3em;
+}
+
+.terminal code {
+    color: var(--code-font-color);
 }
 
 .btn-ghost {
