@@ -176,10 +176,61 @@
     .links-widget a { display: flex; align-items: center; gap: 10px; font-size: 0.86em; color: var(--text-sub); }
     .links-widget a:hover { color: var(--accent); text-decoration: none; }
     .link-icon { color: var(--accent-dim); width: 12px; text-align: center; }
+    .social-icon {
+        width: 16px;
+        height: 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: var(--accent-dim);
+    }
+    .social-icon svg {
+        width: 100%;
+        height: 100%;
+        fill: currentColor;
+    }
+    .links-widget a:hover .social-icon { color: var(--accent); }
+    .social-label { line-height: 1; }
+    .mobile-social-links { display: none; }
+    .mobile-links-widget {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    .mobile-links-widget li { margin: 0; }
+    .mobile-links-widget a {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border);
+        background: var(--bg-card);
+        color: var(--text-sub);
+        transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+    .mobile-links-widget a:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+        text-decoration: none;
+    }
+    .mobile-links-widget .social-icon {
+        width: 18px;
+        height: 18px;
+        color: currentColor;
+    }
 
      
     .page-article {
-        display: flex;
+        display: grid;
+        grid-template-columns: 210px minmax(0, 680px) 210px;
+        grid-template-areas:
+            "toc header meta"
+            "toc content meta";
         justify-content: center;
         max-width: 1300px;
         margin: 0 auto;
@@ -189,6 +240,7 @@
 
      
     .toc-col {
+        grid-area: toc;
         width: 210px; flex-shrink: 0;
         position: sticky; top: 70px; align-self: flex-start;
         padding-right: 36px;
@@ -216,10 +268,26 @@
     #TableOfContents a:hover { color: var(--text); border-left-color: var(--border); }
     #TableOfContents a.active { color: var(--accent); border-left-color: var(--accent); }
 
+    .article-header-wrap {
+        grid-area: header;
+        width: 100%;
+        max-width: 680px;
+        padding: 0 50px;
+        min-width: 0;
+    }
+
      
-    .content-col { flex: 1; max-width: 680px; padding: 0 50px; min-width: 0; }
+    .content-col {
+        grid-area: content;
+        width: 100%;
+        max-width: 680px;
+        padding: 0 50px;
+        min-width: 0;
+    }
 
     .article-header { margin-bottom: 40px; }
+    .article-body { min-width: 0; }
+    .article-spacer { height: 120px; }
 
     .article-kicker {
         font-size: 0.71em; letter-spacing: 0.18em; text-transform: uppercase;
@@ -273,6 +341,7 @@
 
      
     .meta-col {
+        grid-area: meta;
         width: 210px; flex-shrink: 0;
         padding-left: 36px;
         border-left: 1px solid var(--border);
@@ -468,6 +537,196 @@
     }
 
     .panel-reset:hover { border-color: var(--accent); color: var(--accent); }
+
+    @media (max-width: 980px) {
+        .header-inner {
+            padding: 0 24px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .nav-list {
+            flex-wrap: wrap;
+            gap: 8px 16px;
+        }
+
+        .nav-list li { margin-bottom: 0; }
+
+        .page-home {
+            margin: 32px auto;
+            padding: 0 24px;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .page-home .sidebar {
+            width: auto;
+        }
+
+        .hero {
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 36px;
+        }
+
+        .post-card {
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+
+        .post-date {
+            padding-top: 0;
+        }
+
+        .page-article {
+            grid-template-columns: minmax(0, 1fr);
+            grid-template-areas:
+                "header"
+                "meta"
+                "toc"
+                "content";
+            padding: 32px 24px;
+            gap: 24px;
+        }
+
+        .article-header-wrap,
+        .content-col {
+            max-width: none;
+            padding: 0;
+        }
+
+        .article-header {
+            margin-bottom: 0;
+        }
+
+        .article-title {
+            font-size: 1.85em;
+            margin-bottom: 14px;
+        }
+
+        .article-meta {
+            flex-wrap: wrap;
+            gap: 10px 16px;
+        }
+
+        .toc-col,
+        .meta-col {
+            width: auto;
+            position: static;
+            padding: 16px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+        }
+
+        .toc-col {
+            top: auto;
+        }
+
+        .meta-col {
+            border-left: 1px solid var(--border);
+        }
+
+        .meta-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-spacer {
+            height: 72px;
+        }
+
+        .site-footer {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        #panel-toggle {
+            right: 16px;
+            bottom: 16px;
+        }
+
+        #design-panel {
+            left: 16px;
+            right: 16px;
+            bottom: 64px;
+            width: auto;
+            max-height: calc(100vh - 88px);
+        }
+    }
+
+    @media (max-width: 640px) {
+        .header-inner,
+        .page-home,
+        .page-article,
+        .site-footer {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .nav-list a {
+            font-size: 0.88em;
+        }
+
+        .mobile-social-links {
+            display: block;
+            margin-bottom: 24px;
+        }
+
+        .page-home .sidebar .widget-links {
+            display: none;
+        }
+
+        .hero-name {
+            font-size: 1.18em;
+        }
+
+        .hero-role,
+        .hero-bio,
+        .post-excerpt,
+        .widget-list a,
+        .links-widget a,
+        .meta-date,
+        .meta-section a {
+            font-size: 0.82em;
+        }
+
+        .post-footer {
+            gap: 10px;
+        }
+
+        .article-title {
+            font-size: 1.55em;
+        }
+
+        .article-meta {
+            font-size: 0.75em;
+        }
+
+        .content-col h2,
+        .content-col h3 {
+            gap: 8px;
+            line-height: 1.4;
+        }
+
+        .highlight pre {
+            padding: 12px 14px;
+            font-size: 0.82em;
+        }
+
+        #design-panel {
+            left: 12px;
+            right: 12px;
+            bottom: 60px;
+        }
+
+        .bg-presets {
+            flex-wrap: wrap;
+        }
+
+        .bg-preset {
+            flex: 1 1 calc(50% - 4px);
+        }
+    }
 </style>
 
 </head>
@@ -507,8 +766,7 @@
 </nav>
     </aside>
 
-    
-    <main class="content-col">
+    <div class="article-header-wrap">
         <div class="article-header">
             <p class="article-kicker">// </p>
             <h1 class="article-title">About Me</h1>
@@ -521,8 +779,12 @@
                 <span><span class="icon">$</span>1 min</span>
             </div>
         </div>
+    </div>
 
-        <p>Welcome to my personal space! I am a first-year PhD student at UC Santa Barbara, with a deep love for problem-solving, teaching, and research.</p>
+    
+    <main class="content-col">
+        <div class="article-body">
+            <p>Welcome to my personal space! I am a first-year PhD student at UC Santa Barbara, with a deep love for problem-solving, teaching, and research.</p>
 <h2 id="background">Background</h2>
 <p>I graduated with a BSc in Computer Science and Engineering from Bangladesh University of Engineering and Technology (BUET). I currently work with Professor Divyakant Agrawal and Professor Amr El Abbadi at UCSB. My passion for teaching and mentorship remains a core part of who I am.</p>
 <h2 id="research-interests">Research Interests</h2>
@@ -547,8 +809,9 @@
 <li><strong>Google Scholar</strong>: <a href="https://scholar.google.com/citations?user=7uwtNN8AAAAJ&amp;hl=en">Profile</a></li>
 </ul>
 
+        </div>
 
-        <div style="height: 120px;"></div>
+        <div class="article-spacer"></div>
     </main>
 
     
