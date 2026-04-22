@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Llms on Sohaib</title>
+    <link>https://sohaib03.github.io/tags/llms/</link>
+    <description>Recent content in Llms on Sohaib</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sohaib03.github.io/tags/llms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Access Paths for Efficient Ordering with Large Language Models</title>
+      <link>https://sohaib03.github.io/research/access-paths-llm-ordering/</link>
+      <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/research/access-paths-llm-ordering/</guid>
+      <description>&lt;p&gt;This work studies &lt;code&gt;LLM ORDER BY&lt;/code&gt; as a semantic database operator and asks a systems question: given an LLM-based ordering task, what physical implementation should a data system choose? The paper evaluates multiple execution strategies for semantic sorting, introduces several algorithmic improvements, and shows that no single access path is uniformly best across datasets and workloads.&lt;/p&gt;&#xA;&lt;h2 id=&#34;key-ideas&#34;&gt;Key Ideas&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Logical vs. physical abstraction:&lt;/strong&gt; The paper frames &lt;code&gt;LLM ORDER BY&lt;/code&gt; as a logical operator whose implementation can vary depending on task characteristics and cost constraints.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Improved semantic sorting methods:&lt;/strong&gt; It strengthens existing semantic sorting algorithms and introduces a semantic-aware external merge sort for LLM-driven ranking.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Budget-aware optimization:&lt;/strong&gt; It proposes an optimizer that combines heuristic rules, LLM-as-judge evaluation, and consensus aggregation to choose a near-optimal access path dynamically.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;main-takeaways&#34;&gt;Main Takeaways&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Different semantic ordering workloads benefit from different implementations.&lt;/li&gt;&#xA;&lt;li&gt;There is a measurable relationship between compute cost and ranking quality for comparison-based approaches.&lt;/li&gt;&#xA;&lt;li&gt;Careful systems-level optimization can make LLM-powered analytic operators much more practical and robust.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;why-it-matters&#34;&gt;Why It Matters&lt;/h2&gt;&#xA;&lt;p&gt;As LLMs become part of data systems, ranking and sorting by semantics become first-class operations. This paper helps bridge database-style query optimization with LLM-based execution, offering early foundations for principled operator design in large-scale LLM-powered analytics.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

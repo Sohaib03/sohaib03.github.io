@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bison on Sohaib</title>
+    <link>https://sohaib03.github.io/tags/bison/</link>
+    <description>Recent content in Bison on Sohaib</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sohaib03.github.io/tags/bison/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Yet Another C Compiler</title>
+      <link>https://sohaib03.github.io/projects/c-compiler/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/projects/c-compiler/</guid>
+      <description>&lt;p&gt;This repository contains my implementation of a &lt;strong&gt;C Compiler&lt;/strong&gt;, developed as part of a lab project during my undergraduate studies at &lt;strong&gt;BUET&lt;/strong&gt;. The project encompasses the complete pipeline of compiler construction, progressing through various stages to produce a functional compiler.&lt;/p&gt;&#xA;&lt;h2 id=&#34;compiler-stages&#34;&gt;Compiler Stages&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-symbol-table-creation&#34;&gt;1. Symbol Table Creation&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Designed and implemented a &lt;strong&gt;hashtable-based symbol table&lt;/strong&gt; in C++ for efficient management of identifiers.&lt;/li&gt;&#xA;&lt;li&gt;The symbol table supports storing and retrieving variable names, function signatures, and associated attributes.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-lexical-analysis&#34;&gt;2. Lexical Analysis&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Built a lexical analyzer to &lt;strong&gt;tokenize the input source code&lt;/strong&gt; into a sequence of meaningful tokens.&lt;/li&gt;&#xA;&lt;li&gt;Used &lt;strong&gt;Flex&lt;/strong&gt;, a fast and powerful lexical analyzer generator, to define tokenization rules.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-parsing&#34;&gt;3. Parsing&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Constructed a parser to perform &lt;strong&gt;syntactic analysis&lt;/strong&gt; on the tokenized input, ensuring it adheres to the language grammar.&lt;/li&gt;&#xA;&lt;li&gt;Used &lt;strong&gt;Bison&lt;/strong&gt;, a parser generator, to define a formal context-free grammar for C.&lt;/li&gt;&#xA;&lt;li&gt;Bison constructs a &lt;strong&gt;parse tree&lt;/strong&gt; and identifies syntax errors in the input code during this phase.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;4-intermediate-code-generation&#34;&gt;4. Intermediate Code Generation&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Developed the Intermediate Code Generator to produce code compatible with the &lt;strong&gt;EMU8086 emulator&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;This stage translates high-level C constructs into intermediate representations like three-address code (TAC).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;about-the-project&#34;&gt;About the Project&lt;/h2&gt;&#xA;&lt;p&gt;This &lt;strong&gt;C Compiler&lt;/strong&gt; demonstrates the complete process of compiler construction, from symbol table management to code generation. Originally created as part of the &lt;strong&gt;CSE 310 Compiler Lab at BUET&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

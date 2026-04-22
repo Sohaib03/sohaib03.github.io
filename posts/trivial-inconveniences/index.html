@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cache-Oblivious Algorithms · Sohaib</title>
+<meta name="robots" content="all,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+     
+    :root {
+        --bg:         #0F0F0F;
+        --bg-card:    #141414;
+        --border:     #252525;
+        --text:       #d0cdc5;
+        --text-sub:   #999693;
+        --text-dim:   #666360;
+        --accent:     #9EC8B9;
+        --accent-dim: #5a8270;
+        --font:       'JetBrains Mono', 'Courier New', monospace;
+        --size:       14px;
+        --lh:         1.7;
+    }
+
+     
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font);
+        font-size: var(--size);
+        line-height: var(--lh);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    strong { font-weight: 700; }
+    ul, ol { padding-left: 1.4em; }
+    li { margin-bottom: 0.3em; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+    img { max-width: 100%; height: auto; display: block; margin: 20px 0; }
+    pre, code { font-family: var(--font); }
+
+     
+    .highlight pre {
+        background: var(--bg-card) !important;
+        border: 1px solid var(--border);
+        border-left: 2px solid var(--accent-dim);
+        padding: 14px 18px;
+        overflow-x: auto;
+        font-size: 0.86em;
+        margin: 20px 0;
+        line-height: 1.6;
+    }
+
+     
+    .site-header {
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-inner {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 36px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo { font-size: 1em; color: var(--text); }
+    .logo .prompt { color: var(--accent); }
+    .logo::after {
+        content: "█";
+        color: var(--accent);
+        animation: blink 1s step-end infinite;
+        font-size: 0.79em;
+        margin-left: 1px;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .nav-list { display: flex; gap: 20px; list-style: none; padding: 0; }
+    .nav-list a { font-size: 0.93em; color: var(--text-sub); }
+    .nav-list a:hover { color: var(--accent); text-decoration: none; }
+
+     
+    .site-footer {
+        border-top: 1px solid var(--border);
+        padding: 18px 36px;
+        font-size: 0.79em;
+        color: var(--text-dim);
+        text-align: center;
+        margin-top: 40px;
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .site-footer a { color: var(--text-dim); }
+    .site-footer a:hover { color: var(--accent); }
+
+     
+    .page-home {
+        max-width: 1100px;
+        margin: 48px auto;
+        padding: 0 36px;
+        display: flex;
+        gap: 52px;
+    }
+
+    .page-home .main { flex: 1; min-width: 0; }
+    .page-home .sidebar { width: 240px; flex-shrink: 0; }
+
+    .hero { display: flex; align-items: flex-start; gap: 24px; margin-bottom: 48px; }
+
+    .hero-photo {
+        width: 72px; height: 72px;
+        border-radius: 50%; object-fit: cover;
+        flex-shrink: 0; border: 2px solid var(--border); margin: 0;
+    }
+
+    .hero-name { font-size: 1.29em; color: var(--text); margin-bottom: 4px; }
+    .hero-role { font-size: 0.86em; color: var(--accent-dim); margin-bottom: 10px; letter-spacing: 0.04em; }
+    .hero-bio { font-size: 0.93em; color: var(--text-sub); line-height: 1.7; }
+    .hero-bio a { color: var(--accent); }
+
+    .section-label {
+        font-size: 0.71em; letter-spacing: 0.18em; text-transform: uppercase;
+        color: var(--accent-dim); margin-bottom: 16px; padding-left: 2px;
+    }
+
+    .posts { margin-bottom: 44px; }
+
+    .post-card {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 0 18px;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .post-date { font-size: 0.79em; color: var(--text-dim); padding-top: 2px; white-space: nowrap; }
+    .post-title { font-size: 1em; color: var(--text); margin-bottom: 5px; font-weight: 700; }
+    .post-title a { color: inherit; }
+    .post-title a:hover { color: var(--accent); text-decoration: none; }
+    .post-excerpt { font-size: 0.86em; color: var(--text-sub); line-height: 1.65; margin-bottom: 8px; }
+    .post-excerpt strong { color: var(--text); }
+    .post-footer { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .post-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .post-tag { font-size: 0.71em; color: var(--text-dim); border: 1px solid var(--border); padding: 1px 6px; }
+    .read-more { font-size: 0.79em; color: var(--accent-dim); }
+
+    .widget { margin-bottom: 32px; }
+    .widget-label {
+        font-size: 0.71em; letter-spacing: 0.18em; text-transform: uppercase;
+        color: var(--accent-dim); margin-bottom: 10px; padding-left: 2px;
+    }
+    .widget-list { list-style: none; padding: 0; }
+    .widget-list li { padding: 5px 0; }
+    .widget-list a { font-size: 0.86em; color: var(--text-sub); }
+    .widget-list a:hover { color: var(--accent); text-decoration: none; }
+    .item-meta { font-size: 0.71em; color: var(--text-dim); display: block; margin-top: 1px; }
+
+    .links-widget { list-style: none; padding: 0; }
+    .links-widget li { padding: 4px 0; }
+    .links-widget a { display: flex; align-items: center; gap: 10px; font-size: 0.86em; color: var(--text-sub); }
+    .links-widget a:hover { color: var(--accent); text-decoration: none; }
+    .link-icon { color: var(--accent-dim); width: 12px; text-align: center; }
+
+     
+    .page-article {
+        display: flex;
+        justify-content: center;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 48px 40px;
+        gap: 0;
+    }
+
+     
+    .toc-col {
+        width: 210px; flex-shrink: 0;
+        position: sticky; top: 70px; align-self: flex-start;
+        padding-right: 36px;
+        border-right: 1px solid var(--border);
+    }
+
+    .toc-header {
+        font-size: 0.71em; letter-spacing: 0.18em; text-transform: uppercase;
+        color: var(--accent-dim); margin-bottom: 16px;
+    }
+
+     
+    #TableOfContents { margin: 0; }
+    #TableOfContents ul { list-style: none; padding: 0; }
+    #TableOfContents li { margin: 0; }
+    #TableOfContents a {
+        display: block;
+        padding: 5px 0 5px 14px;
+        font-size: 0.86em;
+        color: var(--text-sub);
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        transition: all 0.15s;
+    }
+    #TableOfContents a:hover { color: var(--text); border-left-color: var(--border); }
+    #TableOfContents a.active { color: var(--accent); border-left-color: var(--accent); }
+
+     
+    .content-col { flex: 1; max-width: 680px; padding: 0 50px; min-width: 0; }
+
+    .article-header { margin-bottom: 40px; }
+
+    .article-kicker {
+        font-size: 0.71em; letter-spacing: 0.18em; text-transform: uppercase;
+        color: var(--accent-dim); margin-bottom: 12px;
+    }
+
+    .article-title {
+        font-size: 2.2em; font-weight: 700; color: var(--text);
+        line-height: 1.2; margin-bottom: 18px;
+    }
+
+    .article-meta {
+        font-size: 0.79em; color: var(--text-dim);
+        padding: 10px 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        display: flex; gap: 20px;
+    }
+
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+    .article-meta .icon { color: var(--accent-dim); }
+
+     
+    .content-col h2, .content-col h3 {
+        font-size: 0.79em;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 36px 0 14px;
+        scroll-margin-top: 80px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .content-col h2::before { content: "##"; color: var(--text-dim); }
+    .content-col h3::before { content: "###"; color: var(--text-dim); }
+
+    .content-col p { font-size: 1em; color: var(--text); margin-bottom: 16px; }
+    .content-col ul, .content-col ol { margin-bottom: 16px; color: var(--text-sub); }
+    .content-col li { margin-bottom: 6px; }
+    .content-col li strong { color: var(--text); }
+    .content-col hr { margin: 28px 0; }
+    .content-col blockquote {
+        border-left: 2px solid var(--accent-dim);
+        padding-left: 16px;
+        color: var(--text-sub);
+        margin: 20px 0;
+    }
+
+     
+    .meta-col {
+        width: 210px; flex-shrink: 0;
+        padding-left: 36px;
+        border-left: 1px solid var(--border);
+    }
+
+    .meta-section { margin-bottom: 28px; }
+
+    .meta-label {
+        font-size: 0.71em; letter-spacing: 0.18em; text-transform: uppercase;
+        color: var(--accent-dim); margin-bottom: 10px;
+    }
+
+    .meta-section ul { list-style: none; padding: 0; }
+    .meta-section li { padding: 4px 0; }
+    .meta-section a { font-size: 0.86em; color: var(--text-sub); }
+    .meta-section a:hover { color: var(--accent); text-decoration: none; }
+    .meta-date { font-size: 0.86em; color: var(--text-sub); }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { font-size: 0.71em; border: 1px solid var(--border); color: var(--text-dim); padding: 2px 7px; }
+</style>
+
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo"><span class="prompt">~/</span>Sohaib</div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="http://localhost:1313/about/">about/</a></li>
+                    <li><a href="http://localhost:1313/posts/">posts/</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+<div class="page-article">
+
+    
+    <aside class="toc-col">
+        <p class="toc-header">// contents</p>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-oblivious-approach">The Oblivious Approach</a></li>
+  </ul>
+</nav>
+    </aside>
+
+    
+    <main class="content-col">
+        <div class="article-header">
+            <p class="article-kicker">// posts</p>
+            <h1 class="article-title">Cache-Oblivious Algorithms</h1>
+            <div class="article-meta">
+                <span>
+                    <span class="icon">@</span>
+                    Sohaib
+                </span>
+                <span><span class="icon">~</span>Mar 20, 2026</span>
+                <span><span class="icon">$</span>1 min</span>
+            </div>
+        </div>
+
+        <p>System memory is not flat. It exists in a deep hierarchy of L1, L2, L3 caches, main memory (RAM), and disk storage.</p>
+<p>If your algorithm performs randomly scattered memory access, it will trigger constant cache misses, slowing down execution by orders of magnitude compared to sequential access.</p>
+<h2 id="the-oblivious-approach">The Oblivious Approach</h2>
+<p>A Cache-Oblivious Algorithm is designed to take advantage of a CPU cache hierarchy without knowing the exact size parameters of those caches. Using recursive divide-and-conquer strategies (like the Van Emde Boas layout for trees), the algorithm inherently localizes memory access. This results in optimal cache hit rates on any machine it runs on, completely independent of the hardware specifications.</p>
+
+
+        <div style="height: 120px;"></div>
+    </main>
+
+    
+    <aside class="meta-col">
+        <div class="meta-section">
+            <p class="meta-label">// date</p>
+            <span class="meta-date">Mar 20, 2026</span>
+        </div>
+        
+        
+    </aside>
+
+</div>
+
+<script>
+    
+    const tocLinks = Array.from(document.querySelectorAll('#TableOfContents a'));
+    const headings = Array.from(document.querySelectorAll('.content-col h2, .content-col h3'));
+
+    function updateSpy() {
+        const trigger = window.innerHeight * 0.25;
+        let active = headings[0];
+        headings.forEach(h => {
+            if (h.getBoundingClientRect().top <= trigger) active = h;
+        });
+        if (active) {
+            tocLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + active.id));
+        }
+    }
+
+    window.addEventListener('scroll', updateSpy, { passive: true });
+    updateSpy();
+</script>
+
+
+    <footer class="site-footer">
+        Powered by <a href="https://gohugo.io/">Hugo</a>.
+    </footer>
+
+</body>
+</html>

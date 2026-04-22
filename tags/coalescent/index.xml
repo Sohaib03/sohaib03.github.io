@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coalescent on Sohaib</title>
+    <link>https://sohaib03.github.io/tags/coalescent/</link>
+    <description>Recent content in Coalescent on Sohaib</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sohaib03.github.io/tags/coalescent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QT-WEAVER</title>
+      <link>https://sohaib03.github.io/research/qtweaver/</link>
+      <pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/research/qtweaver/</guid>
+      <description>&lt;p&gt;Summarizing individual gene trees into species phylogenies using coalescent-based methods has become a standard approach in phylogenomics. However, &lt;strong&gt;gene tree estimation error (GTEE)&lt;/strong&gt;—arising from both analytical factors and biological causes (e.g., short gene sequences)—can adversely impact the accuracy of phylogenomic inference. QT-WEAVER introduces the novel problem of correcting the quartet distribution induced by a set of estimated gene trees.&lt;/p&gt;&#xA;&lt;p&gt;This involves updating the weights of the quartets to better reflect their relative importance within the gene tree distribution. QT-WEAVER learns conflicts within the quartet distribution induced by a set of gene trees and adjusts the weights to generate an updated quartet distribution.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WQFM-tree</title>
+      <link>https://sohaib03.github.io/research/wqfmtree/</link>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/research/wqfmtree/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;wQFM-TREE&lt;/strong&gt; is a summary method developed for species tree estimation from multi-locus data, addressing gene tree discordance. It builds on the wQFM method and improves its scalability, making it applicable to large datasets.&lt;/p&gt;&#xA;&lt;h2 id=&#34;key-features&#34;&gt;Key Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Improved Scalability:&lt;/strong&gt; Removes the need for explicit quartet generation and weighting, allowing efficient processing of large datasets with many taxa and genes.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Polytomy Handling:&lt;/strong&gt; Unlike wQFM, wQFM-TREE can handle datasets with polytomies.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Accuracy:&lt;/strong&gt; In simulations, wQFM-TREE matches or outperforms ASTRAL in terms of accuracy across various model conditions.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Real-World Application:&lt;/strong&gt; Successfully re-analyzed the green plant dataset from the One Thousand Plant Transcriptomes Initiative, demonstrating its practical utility.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;performance&#34;&gt;Performance&lt;/h2&gt;&#xA;&lt;p&gt;Simulations show that wQFM-TREE outperforms ASTRAL in 25 out of 27 conditions tested, with significant improvements in 20 of these conditions. It demonstrates reliability and accuracy, even in challenging phylogenetic models involving 200–1000 taxa.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

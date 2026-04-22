@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emulation on Sohaib</title>
+    <link>https://sohaib03.github.io/tags/emulation/</link>
+    <description>Recent content in Emulation on Sohaib</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sohaib03.github.io/tags/emulation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CHIP-8 Emulator</title>
+      <link>https://sohaib03.github.io/projects/chip-8/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/projects/chip-8/</guid>
+      <description>&lt;p&gt;This project is a &lt;strong&gt;CHIP-8 emulator&lt;/strong&gt; written in &lt;strong&gt;Golang&lt;/strong&gt;. The &lt;strong&gt;Ebiten game engine&lt;/strong&gt; was used to create the graphical interface. Developing this project helped me understand how emulators work by simulating the behavior of a physical machine in software.&lt;/p&gt;&#xA;&lt;h2 id=&#34;about-chip-8&#34;&gt;About CHIP-8&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CHIP-8 is an old, simple programming language designed for running games in the 1970s.&lt;/li&gt;&#xA;&lt;li&gt;It supports &lt;strong&gt;35 instructions (opcodes)&lt;/strong&gt;, which control tasks like drawing, memory operations, and branching.&lt;/li&gt;&#xA;&lt;li&gt;The system has &lt;strong&gt;16 registers&lt;/strong&gt;, a 4K memory space, and a stack for handling subroutines.&lt;/li&gt;&#xA;&lt;li&gt;The graphics are black-and-white with a resolution of &lt;strong&gt;64×32 pixels&lt;/strong&gt;, suitable for basic games.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;project-highlights&#34;&gt;Project Highlights&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Implemented Opcodes:&lt;/strong&gt; Executed all CHIP-8 instructions to run programs correctly.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Simulated Hardware:&lt;/strong&gt; Emulated memory, registers, and the stack for CHIP-8 programs.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Graphical Output:&lt;/strong&gt; Used &lt;strong&gt;Ebiten&lt;/strong&gt; to display the 64×32 monochrome grid.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Input Handling:&lt;/strong&gt; Added support for the CHIP-8 16-key hexadecimal keypad.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;This project introduced me to emulator development by working on a small and simple system. It gave me a clear idea of how instructions, memory, and graphics interact in a machine.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

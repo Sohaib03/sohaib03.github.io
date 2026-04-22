@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Streaming on Sohaib</title>
+    <link>https://sohaib03.github.io/tags/streaming/</link>
+    <description>Recent content in Streaming on Sohaib</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sohaib03.github.io/tags/streaming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oblivious SpaceSaving: Heavy-Hitter Detection over Fully Homomorphic Encryption</title>
+      <link>https://sohaib03.github.io/research/oblivious-spacesaving/</link>
+      <pubDate>Fri, 27 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/research/oblivious-spacesaving/</guid>
+      <description>&lt;p&gt;Heavy-hitter detection is a core primitive in stream analytics, but running it over sensitive streams on untrusted infrastructure raises important privacy concerns. This work presents &lt;strong&gt;Oblivious SpaceSaving&lt;/strong&gt;, a privacy-preserving reformulation of the classical Space-Saving algorithm for execution over fully homomorphic encryption (FHE).&lt;/p&gt;&#xA;&lt;h2 id=&#34;core-ideas&#34;&gt;Core Ideas&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Encrypted heavy-hitter detection:&lt;/strong&gt; The system performs exact heavy-hitter computation on encrypted streams without relying on multi-server trust assumptions.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Moving Floor abstraction:&lt;/strong&gt; The main algorithmic idea replaces repeated encrypted magnitude comparisons with equality-based selection against a tracked encrypted floor.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Streaming systems design:&lt;/strong&gt; The paper combines this idea with parallel victim selection and a hierarchical asynchronous ingestion pipeline for end-to-end encrypted processing.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Reduces encrypted update cost by up to &lt;strong&gt;2.74x&lt;/strong&gt; over a naive oblivious baseline.&lt;/li&gt;&#xA;&lt;li&gt;Sustains encrypted ingestion throughput of up to &lt;strong&gt;4.30 items/s&lt;/strong&gt; with sub-second amortized latency.&lt;/li&gt;&#xA;&lt;li&gt;Preserves the deterministic accuracy guarantees of the original Space-Saving algorithm.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;why-it-matters&#34;&gt;Why It Matters&lt;/h2&gt;&#xA;&lt;p&gt;This paper shows that classical streaming summaries can be reformulated to become practical under fully encrypted execution. It sits at the intersection of privacy, databases, and streaming systems, and pushes privacy-preserving analytics closer to real deployment settings.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

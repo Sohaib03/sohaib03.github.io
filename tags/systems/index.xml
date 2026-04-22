@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Systems on Sohaib</title>
+    <link>https://sohaib03.github.io/tags/systems/</link>
+    <description>Recent content in Systems on Sohaib</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sohaib03.github.io/tags/systems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xv6 OS Enhancements</title>
+      <link>https://sohaib03.github.io/projects/xv6-os/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://sohaib03.github.io/projects/xv6-os/</guid>
+      <description>&lt;p&gt;This project extends the &lt;strong&gt;xv6 Operating System&lt;/strong&gt;, a simple Unix-like OS developed for educational purposes. The enhancements include the implementation of advanced scheduling algorithms, paging, and file system features.&lt;/p&gt;&#xA;&lt;h2 id=&#34;enhancements-and-features&#34;&gt;Enhancements and Features&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-lottery-ticket-scheduling&#34;&gt;1. Lottery Ticket Scheduling&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Implemented &lt;strong&gt;lottery scheduling&lt;/strong&gt;, a probabilistic CPU scheduling algorithm.&lt;/li&gt;&#xA;&lt;li&gt;Processes receive &amp;ldquo;lottery tickets&amp;rdquo; proportional to their priority; the scheduler randomly selects a ticket to decide which process runs.&lt;/li&gt;&#xA;&lt;li&gt;This approach ensures &lt;strong&gt;fair CPU allocation&lt;/strong&gt; while allowing dynamic adjustment of process priorities.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-multi-level-feedback-queue-mlfq-scheduling&#34;&gt;2. Multi-Level Feedback Queue (MLFQ) Scheduling&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Added &lt;strong&gt;MLFQ scheduling&lt;/strong&gt;, a priority-based scheduler with multiple queues.&lt;/li&gt;&#xA;&lt;li&gt;Processes dynamically move between queues based on their execution behavior.&lt;/li&gt;&#xA;&lt;li&gt;Balances between &lt;strong&gt;responsiveness&lt;/strong&gt; and &lt;strong&gt;throughput&lt;/strong&gt;, making it suitable for mixed workloads.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-paging&#34;&gt;3. Paging&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Implemented &lt;strong&gt;paging&lt;/strong&gt; to support virtual memory management.&lt;/li&gt;&#xA;&lt;li&gt;Used page tables to map virtual addresses to physical memory, enabling efficient memory utilization and protection.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;4-file-system-enhancements&#34;&gt;4. File System Enhancements&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Enhanced the xv6 &lt;strong&gt;file system&lt;/strong&gt; to improve functionality and performance.&lt;/li&gt;&#xA;&lt;li&gt;Added support for advanced features like file metadata handling and optimized disk I/O operations.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;about-the-project&#34;&gt;About the Project&lt;/h2&gt;&#xA;&lt;p&gt;Originally developed as part of an &lt;strong&gt;Operating Systems Lab&lt;/strong&gt; at BUET, this project highlights proficiency in scheduling algorithms, memory management, and file systems.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
